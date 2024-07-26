@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+:root {
+    --body-bg-color: #141414;
+    --container-bg-color: #1f1f1f;
+    --button-bg-color: #333;
+    --button-hover-color: #c5f82a;
+    --text-color: #fff;
+}
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    font-family: "Inter";
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: #3e52a3;
+}
+.container {
+    background: var(--container-bg-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    margin-bottom: 200px;
+}
+img{
+    margin-bottom: 20px;
+    border-radius: 50%;
+    width: 100px
+}
+.container > h2 {
+    font-weight: 600;
+    padding: 0 40px;
+    letter-spacing: 1px;
+}
+.container > p {
+    font-weight: 500;
+    padding: 5px 0 30px 0;
+    color: var(--button-hover-color);
+}
+.container > h5 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.container ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+}
+
+.cButton {
+    background: var(--button-bg-color);
+    border-radius: 5px;
+    border: none;
+    color: var(--text-color);
+    display: inline-block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    transition: all 200ms ease-in-out;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.cButton:hover {
+    background: var(--button-hover-color);
+    color: var(--body-bg-color);
+}
+.cButton:active {
+    filter: brightness(1);
+}
+@media only screen and (max-width: 1440px) {
+    .container{
+        margin: 20px ;
+        padding: 10px 30px;
+    }
+    .container>img{
+        width: 80px;
+    }
+  }

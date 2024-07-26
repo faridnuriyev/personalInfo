@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png" />
+        <link rel="stylesheet" href="/assets/style/style.css" />
+        <link rel="stylesheet" href="/assets/style/reset.css" />
+
+        <title>Frontend Mentor | Social links profile</title>
+    </head>
+    <body>
+        <div class="container">
+            <img
+                src="./assets/images/avatar-jessica.jpeg"
+                alt="avatar-jessica" />
+            <h2>Jessica Randall</h2>
+            <p>London, United Kingdom</p>
+            <h5>"Front-end developer and avid reader."</h5>
+            <ul>
+                <li>
+                    <button data-link="https://github.com/faridnuriyev" class="cButton">
+                        GitHub
+                    </button>
+                </li>
+                <li>
+                    <button
+                        data-link="https://www.frontendmentor.io/home"
+                        class="cButton">
+                        Frontend Mentor
+                    </button>
+                </li>
+                <li>
+                    <button
+                        data-link="www.linkedin.com/in/farid-nuriyev"
+                        class="cButton">
+                        LinkedIn
+                    </button>
+                </li>
+                <li>
+                    <button data-link="https://x.com/" class="cButton">
+                        Twitter
+                    </button>
+                </li>
+                <li>
+                    <button
+                        data-link="https://www.instagram.com/"
+                        class="cButton">
+                        Instagram
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Farid Nuriyev</a>.
+        </div>
+
+        <script>
+            function handleButtonClick(event) {
+                const link = event.target.getAttribute("data-link");
+                if (link) {
+                    window.location.href = link;
+                }
+            }
+
+            document.querySelectorAll(".cButton").forEach((button) => {
+                button.addEventListener("click", handleButtonClick);
+            });
+        </script>
+    </body>
+</html>
